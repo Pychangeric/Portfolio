@@ -537,6 +537,11 @@ h3.my-profession
     color: var(--bg-black-700);
 }
 /* service*/
+.service .container
+{
+    padding-bottom: 40px;
+
+}
 .service .service-item
 {
     margin-bottom: 30px;
@@ -584,7 +589,24 @@ h3.my-profession
 }
 .service .service-item .service-item-inne h4
 {
-    font
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-black-900);
+    font-weight: 700; 
+    text-transform: capitalize; 
+}
+.service .service-item .service-item-inner p
+{
+    font-size: 16px;
+    color: var(--text-black-700);
+    line-height: 25px;
+
+}
+/* Portfolio */
+.portfolio-section
+{
+    color: var(--text-black-900);
+    background: var(--text-black-900);
 }
 
 
