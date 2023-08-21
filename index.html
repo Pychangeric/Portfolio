@@ -6,42 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- ===== CSS Files ===== -->
-    <link rel="stylesheet" href="skin/style.css">
-    <link rel="stylesheet" href="skin/color-1.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/skin/color-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ===== Style Switcher ===== -->
+    <link rel="stylesheet" href="css/skin/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="css/skin/color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="css/skin/color-3.css" class="alternate-style" title="color-3" disabled>
+    <link rel="stylesheet" href="css/skin/color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="css/skin/color-5.css" class="alternate-style" title="color-5" disabled>
+    <link rel="stylesheet" href="css/style-switcher.css">
 </head>
 <body>
 <!-- ===== Main Container Start===== -->
-<div class="main-container"></div>
-  <!-- ===== Aside start===== -->
-  <div class="aside">
-   <div class="logo">
-     <a href="#"> <span>E</span>ric</a>
-   </div>
-   <div class="nav-toggler">
-    <span></span>
-   </div>
-      <ul class="nav">
-        <li><a href="#" class="active"><i class="fa fa-home"></i>Home</a></li>
-        <li><a href="#" class="active"><i class="fa fa-user"></i>About</a></li>
-        <li><a href="#" class="active"><i class="fa fa-list"></i>Services</a></li>
-        <li><a href="#" class="active"><i class="fa fa-briefcase"></i>Portfolio</a></li>
-        <li><a href="#" class="active"><i class="fa fa-comments"></i>Contact</a></li>
-      </ul>
-  </div>
-   <!-- ===== Aside End===== -->
+<div class="main-container">
+    <!-- ===== Aside start===== -->
+    <div class="aside">
+     <div class="logo">
+       <a href="#"> <span>E</span>ric</a>
+     </div>
+     <div class="nav-toggler">
+      <span></span>
+     </div>
+        <ul class="nav">
+          <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
+          <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
+          <li><a href="#services"><i class="fa fa-list"></i>Services</a></li>
+          <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
+          <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
+        </ul>
+    </div>
+    <!-- ===== Aside End===== -->
     <!-- ===== Main Content Start===== -->
     <div class="main-content">
         <!-- ===== Home Section Start ===== -->
-        <section class="home section">
+        <section class="home section" id="home">
           <div class="container">
             <div class="row">
               <div class="home-info padd-15">
                 <h3 class="hello">Hello,my name is <span class="name">Eric Mutembei</span></h3>
-                <h3 class="my-profession">I'm a <span class="typing"> Web Designer</span></h3>
-                <p>I'm a web designer with extensive for over 10 years.My expertise is to
-                  create and website design,graphic design, and many more ...
-                </p>
+                <h3 class="my-profession">I'm a <span class="typing"> web designer</span></h3>
+                <p>I'm a web designer with extensive skills on my areas of specialization.My expertise is to
+                  create and design websites,graphic design, API building and many more ...</p>
                 <a href="#contact" class="btn hire-me">More About Me</a>
               </div>
               <div class="home-img padd-15">
@@ -52,7 +59,7 @@
         </section>
         <!-- ===== Home Section End ===== -->
         <!-- ===== About Section Start ===== -->
-         <section class="about section">
+         <section class="about section" id="about">
           <div class="container">
             <div class="row">
               <div class="section-title ">
@@ -164,7 +171,7 @@
          </section>
         <!-- ===== About Section End ===== -->
         <!-- ===== Services Section Start ===== -->
-        <section class="service section">
+        <section class="service section" id="services">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -251,7 +258,7 @@
         </section>
         <!-- ===== services Section End ===== -->
         <!-- ===== Portfolio Section Start ===== --> 
-        <section class="portfolio section ">
+        <section class="portfolio section" id="portfolio">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -323,7 +330,7 @@
         </section>
         <!-- ===== Portfolio Section End ===== -->
         <!-- ===== Contact Section Start ===== -->
-        <section class="contact section">
+        <section class="contact section" id="contact">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -406,12 +413,30 @@
         <!-- ===== Contact Section End ===== -->
     </div>
     <!-- ===== Main Content End===== -->
-
-
-
-
-<!-- ===== Main Container End===== -->
-<!-- ===== JS Files ===== -->
-    <script src="js/script.js"></script>
+  </div>
+  <!-- ===== Main Container End===== -->
+  <!-- ===== Style Switcher Start ===== -->
+  <div class="style-switcher">
+    <div class="style-switcher-toggler s-icon">
+      <i class="fas fa-cog fa-spin"></i>
+    </div>
+    <div class="day-night s-icon">
+      <i class="fas "></i>
+    </div>
+    <h4>THEMES</h4>
+    <div class="colors">
+      <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+      <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+      <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+      <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+      <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+    </div>
+  </div>
+  <!-- ===== Style Switcher End ===== -->
+  <!-- ===== JS Files ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+  referrerpolicy="no-referrer"></script>
+  <script src="js/script.js"></script>
+  <script src="js/style-switcher.js"></script>
 </body>
 </html>

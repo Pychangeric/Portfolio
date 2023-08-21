@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;500&display=swap');:root
 {
- --bg-black-900: #ffffff;
- --bg-black-100: #ffffff;
- --bg-black-50: #d3d3d3;
- --text-black-700:#302e4d;
- --text-black-900:#302e4d;
+ --bg-black-900: #ebeaea;
+ --bg-black-100: #cac7c7;
+ --bg-black-50: #faf8f8;
+ --text-black-700:#000000;
+ --text-black-900:#35334d;
 }
+body.dark
+{
+    --bg-black-900: #1b1616;
+    --bg-black-100: #070606;
+    --bg-black-50: #393939;
+    --text-black-700:#ffffff;
+    --text-black-900:#e9e9e9;
+   }
 body
 {
     margin: 0;
@@ -34,7 +42,7 @@ ul
 }
 .section
 {
-    background: var(--bg-black-100);
+    background: var(--bg-black-900);
     min-height: 100vh;
     display: block;
     padding: 0 30px;
@@ -670,7 +678,7 @@ h3.my-profession
 .contact.contact-info-item p {
     font-size: 16px;
     line-height: 25px;
-    color: var(--text-black-700);
+    color: var(--skin-color);
     font-weight: 400;
 }
 .contact .contact-form 
@@ -731,5 +739,37 @@ h3.my-profession
     {
         display: block;
         margin-left: 0;
+    }
+}
+@media (max-width:991px)
+{
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item
+    {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .home .home-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .home .home-img
+    {
+        display: none;
+    }
+}
+@media (max-width:767px)
+{
+    .contact .contact-form .col-6,
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item,
+    .about .about-content .skills,
+    .about .about-content .personal-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
