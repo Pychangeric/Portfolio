@@ -696,7 +696,21 @@ h3.my-profession
     font-size: 15px;
     margin-bottom: 60px;
 }
-.contact .contact-info-item .icon social-icon  {
+.contact-info-item .icon {
+    border-radius: 25px;
+    overflow: hidden;
+    background: var(--bg-black-100);
+    border: 50px;
+    flex: 0 0 10%;
+    max-width: 25%;
+    text-align: center;
+    margin: 60px;
+  }
+.contact .contact-info-item .social-icon {
+    border-radius: 25px;
+    overflow: hidden;
+    background: var(--bg-black-100);
+    border: 50px;
     flex: 0 0 10%;
     max-width: 25%;
     text-align: center;
@@ -705,6 +719,11 @@ h3.my-profession
 .contact .contact-info-item .icon {
     display: inline-block;
 }
+.contact-info-item .icon .fab {
+    font-size: 25px;
+    color: var(--skin-color);
+  }
+  
 .contact .contact-info-item .icon .fa {
     font-size: 25px;
     color:  var(--skin-color);
